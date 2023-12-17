@@ -25,8 +25,8 @@ class model:
         X = np.array(finalized_train)
 
 
-        window_size = 200
-        X_final = X[:, -window_size:]
+        #window_size = 200
+        #X = X[:, -window_size:]
 
-        out = self.model.predict(X_final)
+        out = self.model.predict(X)
         return out
