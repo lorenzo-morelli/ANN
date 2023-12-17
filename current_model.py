@@ -25,10 +25,8 @@ class model:
         X = np.array(finalized_train)
 
 
-        window_size = 150
+        window_size = 200
         X_final = X[:, -window_size:]
 
         out = self.model.predict(X_final)
-        out = out[:, :, 0] # to remove (now model output shape is only [1])
-        #out = np.squeeze(out, axis=2)  # to remove (now model output shape is only [1])
         return out
