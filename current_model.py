@@ -29,5 +29,5 @@ class model:
         #X = X[:, -window_size:]
 
         out = self.model.predict(X)
-        out = out[:, :, 0]
+        #out = out[:, :, 0]
         return out
