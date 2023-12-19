@@ -10,7 +10,6 @@ class model:
 
         label_mapping = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5}
         encoded = np.vectorize(label_mapping.get)(categories)
-    
         finalized_train = []
 
         for i in range(X.shape[0]):
@@ -24,9 +23,8 @@ class model:
 
         X = np.array(finalized_train)
 
-
-        #window_size = 200
-        #X = X[:, -window_size:]
+        window_size = 100
+        X = X[:, -window_size:]
 
         out = self.model.predict(X)
         #out = out[:, :, 0]
