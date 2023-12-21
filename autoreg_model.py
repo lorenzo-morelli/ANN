@@ -42,8 +42,7 @@ class model:
             else:
                 out = np.concatenate((reg_predictions, pred_temp), axis=-1)
 
-            pred_temp = self.add_categories(
-                pred_temp, categories, cat=X_temp[:, :autoregressive_telescope, 1:])
+            pred_temp = self.add_categories(pred_temp, categories, cat=X_temp[:, :autoregressive_telescope, 1:])
             X_temp = np.concatenate(
                 (X_temp[:, autoregressive_telescope:, :], pred_temp), axis=1)
 
