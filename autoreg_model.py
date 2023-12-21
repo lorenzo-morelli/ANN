@@ -34,7 +34,7 @@ class model:
 
         autoregressive_telescope = 9
         reg_predictions = np.array([])
-
+        X_temp = X
         for _ in range(0, 18, autoregressive_telescope):
             pred_temp = self.model.predict(X)
             if (len(reg_predictions) == 0):
