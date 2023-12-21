@@ -33,14 +33,14 @@ class model:
         X = X[:, -window_size:]
 
         autoregressive_telescope = 9
-        reg_predictions = np.array([])
+        out = np.array([])
         X_temp = X
         for _ in range(0, 18, autoregressive_telescope):
             pred_temp = self.model.predict(X)
-            if (len(reg_predictions) == 0):
+            if (len(out) == 0):
                 out = pred_temp
             else:
-                out = np.concatenate((reg_predictions, pred_temp), axis=-1)
+                out = np.concatenate((out, pred_temp), axis=-1)
 
             pred_temp = self.add_categories(pred_temp, categories, cat=X_temp[:, :autoregressive_telescope, 1:])
             X_temp = np.concatenate(
