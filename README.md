@@ -17,7 +17,7 @@ in the NN
 
 ● 92.11% accuracy on local test data, 91% on evaluation data
 
-## Challenge 1: [Time series forecasting](https://github.com/lorenzo-morelli/ANN/tree/main/Time%20series%20forecasting)
+## Challenge 2: [Time series forecasting](https://github.com/lorenzo-morelli/ANN/tree/main/Time%20series%20forecasting)
 
 The goal of the second challenge was to design and implement a forecasting model to learn
 how to exploit past observations in the input sequences and correctly predict the future by
